@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+:root {
+    --maincolor: rgb(183, 2, 183);
+    --seccolor: rgb(4, 4, 255);
+    --yellow:rgb(255, 170, 0);
+    --red:rgb(189, 6, 6);
+}
+
+body{
+    overflow: hidden;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(135deg, rgba(0, 0, 0, 0.515), rgba(0, 0, 0, 0.515)) ,url("fitnesswallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.app {
+    padding: 20px 40px;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #dfcdcdd6;
+    width: 500px;
+ 
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(3px);
+}
+
+.container header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.container .input-box label {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing:.5px;
+    margin-bottom: 5px;
+}
+.container .input-box input {
+      padding: 10px 4px;
+      border: 1px solid grey;
+      border-bottom: 2px solid var(--seccolor);
+      outline: none;
+      font-size: 16px;
+      width: 100%;
+      transition: all 0.5s;
+
+}
+.container .input-box input:focus {
+    border-bottom: 2px solid var(--yellow);
+}
+
+#weight-error ,#height-error {
+    color:red;
+    font-style: italic ;
+}
+.container .btns {
+    display: flex;
+    align-items:center;
+    
+}
+.container .btns button {
+    width: 50%;
+    height:50px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+   font-weight: 600;
+   transition: all 0.5s;
+   
+}
+.calculate-btn {
+    margin-right: 10px;
+    background-color: var(--yellow);
+    color: black;
+    transition: all 0.5s;
+}
+.reset-btn {
+    transition: all 0.5s;
+    background-color: var(--red);
+    color: white;
+}
+.container .btns button:hover {
+   filter:saturate(2);
+}
+.container .result {
+    margin-top: 20px;
+}
+
+.container .result .heading {
+     margin-bottom: 10px;
+}
+.container .result div {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--red);
+}
+footer {
+    margin-top: 30px;
+    background-color:rgba(128, 128, 128, 0.405);
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+    overflow: hidden;
+    padding: 20px 50px;
+    text-align: center;
+}
+footer p {
+    font-weight: 600;
+
+}
+footer .social-links {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 40px;
+     margin-top: 10px;
+     
+}
+footer .social-links a i {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+@media (max-width:900px) {
+    .container {
+        width: 350px;
+    }
+}
+
+

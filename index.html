@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Concert+One&family=Figtree:wght@400;500;600;700;800&family=Flow+Circular&family=Luckiest+Guy&family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="app">
+            <header>
+                <h1>BMI Calculator</h1>
+            </header>
+            <div class="input-box">
+                <label for="height">Height(cm)</label>
+                <input type="text" id="height" pattern="[0-9]*"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <div class="error" id="error"></div>
+                <div class="error1" id="height-error"></div>
+            </div>
+            <div class="input-box">
+                <label for="weight">Weight(Kg)</label>
+                <input type="text" id="weight" pattern="[0-9]*"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <div class="error" id="error"></div>
+                <div class="error2" id="weight-error"></div>
+            </div>
+            <div class="btns">
+                <button onclick="calculate()" class="calculate-btn">Calculate</button>
+                <button onclick="reset()" class="reset-btn">Reset</button>
+            </div>
+            <div class="result">
+                <h2 class="heading" id="heading"></h2>
+                <div class="output" id="bmi-output"></div>
+                <div class="message" id="message"></div>
+            </div>
+        </div>
+        <footer>
+            <p>Created By Ahmad Daher &copy;</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/ahmaddhr_/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/+96176522837"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
